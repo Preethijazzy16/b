@@ -1,4 +1,6 @@
 TITLE OF THE PROJECT: COVID19-AIWEBAPP
+
+
 DESCRIPTION:
 Covid19-AIWebapp is an automated flask web application which helps radiologists to detect diseases from images of chest X-ray and computed tomography (CT-scan). 
 
