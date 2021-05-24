@@ -15,7 +15,10 @@ Deep learning is one of the most effective Artificial Intelligence techniques to
 
 Process Flow:
 Download repo, change to directory of repo, go to command prompt and run pip install -r requirements.txt
+
 On command prompt, run python app.py
+
+
 Open your web browser and go to 127.0.0.1:5000 to access the Flask App
 
 
