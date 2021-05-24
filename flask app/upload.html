@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>COVID-19 Detector</title>
+    
+    <!-- plugin scripts -->
+
+    
+
+
+
+
+
+   
+
+    <style type="text/css">
+        input[type="file"] {
+            display: none;
+        }
+        
+        .custom-file-upload {
+            border: 1px solid #ccc;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <div class="preloader">
+        
+    </div>
+    <!-- /.preloader -->
+    <div class="page-wrapper">
+        <header class="site-header-one">
+            <nav class="main-nav__one stricky">
+                <div class="container-fluid">
+                    <div class="main-nav__logo-box">
+                        <a href="index.html">
+                           
+                        </a>
+                        <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <!-- /.main-nav__logo-box -->
+                    <div class="main-nav__main-navigation">
+                        <ul class=" main-nav__navigation-box">
+                            <li class="dropdown">
+                                <a href="index.html">Home</a>
+
+                            </li>
+                            
+                    <!-- /.main-nav__cta -->
+                    
+                    <!-- /.main-nav__right -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+            <!-- /.main-nav__one -->
+
+        </header>
+        <!-- /.site-header-one -->
+
+
+        <section class="page-header">
+            <div class="container">
+                <h1>COVID DETECTOR</h1>
+                
+                <!-- /.thm-breadcrumb -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.page-header -->
+
+        <section class="prevention-one prevention-one__prevention-page">
+            <div class="container">
+                <div class="block-title text-center">
+                    
+                    <br>
+                    <p style="font-size: 25px;">Select the type of image</p>
+                </div>
+                <!-- /.block-title text-center -->
+
+
+                <div class="row">
+                    <div class="col-lg-6" style="padding-left: 100px;">
+                        <div class="card" style="width: 25rem;">
+                            <p class="card-title" style="text-align: center; padding-top: 10px;padding-bottom: 10px;color:white; background-color:#7a49a5;">Covid Chest X-Ray</p>
+                            <img class="card-img-top" src="assets/images/x-ray.jpg" height="200px" alt="Card image cap">
+                            <div class="card-body">
+
+                                <p class="card-text"></p>
+
+                                <div class="text-center">
+                                    <form action="/uploaded_chest" method="post" enctype="multipart/form-data">
+                                        <label for="file-upload_1" id="label_1" class="custom-file-upload btn btn-primary" style="margin-top: 8px; margin-right: 10px;">
+                        Select Image
+                        </label>
+                                        <input type="file" name="file" id="file-upload_1" onchange="showname()" />
+                                        <input type="submit" value="Upload" class="btn btn-success">
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.col-lg-6 -->
+                    <div class="col-lg-6" style="padding-left: 100px;">
+                        <div class="card" style="width: 25rem;">
+                            <p class="card-title" style="text-align: center; padding-top: 10px;padding-bottom: 10px;color:white; background-color:#7a49a5;">Covid CT Scan</p>
+                            <img class="card-img-top" src="assets/images/ct-scan.jpg" height="200px" alt="Card image cap">
+                            <div class="card-body">
+
+                                <p class="card-text"></p>
+
+
+                                <div class="text-center">
+                                    <form action="/uploaded_ct" method="post" enctype="multipart/form-data">
+                                        <label for="file-upload_2" id="label_2" class="custom-file-upload btn btn-primary" style="margin-top: 8px; margin-right: 10px;">
+                        Select Image
+                        </label>
+                                        <input type="file" name="file" id="file-upload_2" onchange="showname_2()" />
+                                        <input type="submit" value="Upload" class="btn btn-success">
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.prevention-one -->
+
+
+
+    <!-- /.page-wrapper -->
+
+
+    
+
+
+    
+    <!-- /.side-menu__block -->
+
+
+    <script type="text/javascript">
+        function showname() {
+            var name_1 = document.getElementById('file-upload_1');
+            document.getElementById('label_1').innerHTML = name_1.files.item(0).name;
+        };
+
+        function showname_2() {
+            var name_2 = document.getElementById('file-upload_2');
+            document.getElementById('label_2').innerHTML = name_2.files.item(0).name;
+        };
+    </script>
+    
+</body>
+
+</html>
